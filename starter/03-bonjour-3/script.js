@@ -5,7 +5,14 @@ Au clic sur le bouton,
 - fais disparaître le bouton
 */
 
-
+const event = {
+    imgAppear(){
+        const button = document.getElementById('hello');
+        button.addEventListener('click', (b) => {
+            document.querySelector('.display').insertAdjacentHTML('afterbegin', `<img src="bonjour.jpg">`);
+        });
+    }
+}
 
 /*
 Chaque type d'événement est associé à un objet Event spécifique qui fournit des informations sur l'événement via ses propriétés.
