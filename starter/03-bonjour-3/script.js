@@ -13,7 +13,7 @@ const event = {
         });
     }
 }
-
+event.imgAppear();
 /*
 Chaque type d'événement est associé à un objet Event spécifique qui fournit des informations sur l'événement via ses propriétés.
 
