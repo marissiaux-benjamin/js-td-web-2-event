@@ -10,11 +10,23 @@
    * 2°) avec une fonction anonyme
    * 3°) avec une arrow fonction et une expression conditionnelle
 */
+const prenomA = {
+    click() {
+        const inputSelect = document.getElementById('prenom');
+        const buttonSelect = document.getElementById('hello');
+        const recupNom = inputSelect.textContent;
+        buttonSelect.addEventListener('click', (b) => {
+            if (recupNom === '') {
+                document.querySelector('.entree').insertAdjacentHTML('afterend', `<p>Bonjour, ${recupNom} !</p>`);
+            } else {
+                document.querySelector('.entree').insertAdjacentHTML('afterend', '<p>Bonjour, toi ! Tu ne veux pas me dire comment tu t\'appelles ?</p>');
+            }
+        });
+    }
+};
 
-
+prenomA.click();
 // Autre écriture
-
-
 
 
 // Plus court : écriture ES6 avec expression conditionnelle
