@@ -14,3 +14,15 @@ EXERCICE 6 : Change couleur (3)
 
 // ÉTAPE 2 : version avec deux écouteurs
 
+function changeColor (){
+    const couleur = document.querySelector('#colorChoice').value;
+    document.querySelector('#colorBtn').addEventListener('click', () =>{
+        document.body.style.backgroundColor = couleur;
+document.querySelector('').addEventListener('keydown', () =>{
+    document.body.style.backgroundColor = couleur;
+});
+    });
+}
+
+
+changeColor();

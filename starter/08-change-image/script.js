@@ -25,9 +25,18 @@ La méthode classique est de créer une variable temporaire, comme ceci :
 	console.log(`a vaut ${a} et b vaut ${b}`);
 */
 
-
-
 // version de base
+
+const image = {
+    changeImg() {
+        const imgSelect = document.querySelector('img').getAttribute('src');
+        document.body.addEventListener('click', () => {
+
+        });
+    }
+}
+
+image.changeImg();
 
 
 // BONUS : switch entre les deux images

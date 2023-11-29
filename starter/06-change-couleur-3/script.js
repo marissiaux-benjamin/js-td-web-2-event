@@ -9,3 +9,14 @@ EXERCICE 6 : Change couleur (3)
 */
 
 // ÉTAPE 1 : on ne gère que le clic
+const action = {
+    changeColor() {
+        const couleur = document.querySelector('#colorChoice').value;
+        document.querySelector('#colorBtn').addEventListener('click', (c) => {
+            document.body.style.backgroundColor = couleur;
+        });
+    },
+}
+action.changeColor();
+
+
