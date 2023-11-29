@@ -26,11 +26,14 @@ La méthode classique est de créer une variable temporaire, comme ceci :
 */
 
 // version de base
+const imgChange = {
+    nouvImg:'img/kiss-wink-heart.svg',
+    init() {
+        document.body.addEventListener('click', () => {
+            document.querySelector('img').src = this.nouvImg;
+        });
+    }
+}
 
-document.body.addEventListener('click', ()=>{
-    document.querySelector('img').src = 'img/kiss-wink-heart.svg';
-});
-
-
-
+imgChange.init();
 // BONUS : switch entre les deux images
