@@ -9,16 +9,21 @@ Au focus sur le champ, vide-le et change sa couleur de fond. Lorsqu'on clique en
 */
 
 // Un seul champ
-document.querySelectorAll('input[type = text]').forEach((input)=>{
-    input.addEventListener('focus', (event)=>{
-        event.currentTarget.value = '';
-        event.currentTarget.style.backgroundColor = 'orange';
-    });
-    input.addEventListener('blur', (event)=>{
-        event.currentTarget.style.backgroundColor = 'white';
-    })
-})
+const champ = {
+    focusChamp(){
+        document.querySelectorAll('input[type = text]').forEach((input)=>{
+            input.addEventListener('focus', (event)=>{
+                event.currentTarget.value = '';
+                event.currentTarget.style.backgroundColor = 'orange';
+            });
+            input.addEventListener('blur', (event)=>{
+                event.currentTarget.style.backgroundColor = 'white';
+            });
+        });
+    }
+}
 
+champ.focusChamp();
 
 
 // Deux champs
